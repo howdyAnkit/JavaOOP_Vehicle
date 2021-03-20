@@ -99,6 +99,7 @@ class RoyalEnfield extends Bike {
             System.out.println(cl.getStock());
             System.out.println(ReusableString + cl.Range);
             System.out.println(ReusableLocation + cl.DeportedDetails);
+            System.out.println("Stock Details :" + cl.getStock());
             // System.out.println(ReusabelStockString + c1.getStock())
             break;
         case 2:
@@ -107,8 +108,27 @@ class RoyalEnfield extends Bike {
             System.out.println(TB.getStock());
             System.out.println(ReusableString + TB.Range);
             System.out.println(ReusableLocation + TB.DeportedDetails);
+            System.out.println("Stock Details :" + TB.getStock());
+            break;
+        case 3:
+            RoyalEnfield cr3 = new Himalaya();
+            Himalaya HML = (Himalaya) cr3;
+            System.out.println(HML.getStock());
+            System.out.println(ReusableString + HML.Range);
+            System.out.println(ReusableLocation + HML.DeportedDetails);
+            System.out.println("Stock Details :" + HML.getStock());
+            break;
+        case 4:
+            RoyalEnfield cr4 = new GT();
+            GT gtRef = (GT) cr4;
+            System.out.println(gtRef.getStock());
+            System.out.println(ReusableString + gtRef.Range);
+            System.out.println(ReusableLocation + gtRef.DeportedDetails);
+            System.out.println("Stock Details :" + gtRef.getStock());
             break;
 
+        default:
+            System.out.println("No such model Exists");
         }
 
     }
@@ -168,8 +188,8 @@ class ThunderBird extends RoyalEnfield {
 
 class Himalaya extends RoyalEnfield {
     int Range = 800;
-
     private String CustomRequest;
+    String DeportedDetails = " Iraq ";
 
     void ReFeatures() {
         System.out.println("Range :" + Range);
@@ -191,13 +211,14 @@ class Himalaya extends RoyalEnfield {
 class GT extends RoyalEnfield {
     int Range = 5200;
     private String CustomRequest;
+    String DeportedDetails = " Iraq ";
 
     void ReFeatures() {
         System.out.println("Range :" + Range);
     }
 
     public int getStock() {
-        return this.HimalayaStock;
+        return this.GTStock;
     }
 
     public String getCustomRequest() {
