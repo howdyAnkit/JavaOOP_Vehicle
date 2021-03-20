@@ -1,30 +1,29 @@
 public class ThreeWheeler extends Vehicle {
-    int NoOfWheels = wheel;
+    int NoOfWheels;
     int NoOfOneWheeler;
 
     ThreeWheeler() {
-        System.out.println(" TwoWheeler ");
+        System.out.print(" ThreeWheeler ");
     }
 
-    public void TwoWheelerFeatures() {
-        int wheel = 2;
+    public void ThreeWheeler() {
+        NoOfWheels = 2;
     }
 }
 
-class Cycle extends ThreeWheeler {
-    boolean Automatic = false;
+class Auto extends ThreeWheeler {
+    boolean Automatic = true;
     boolean Manual = true;
-    int Seaters = 2;
-    Boolean Helmet = false;
+    int Seaters = 4;
 
-    Cycle() {
-        System.out.print(" -> Cycle");
+    Auto() {
+        System.out.print(" -> Auto ");
+        System.out.println("");
     }
 
-    public void TwoWheelerFeatures() {
-        int seaters = 2;
+    public void ThreeWheeler() {
+        int seaters = 4;
         System.out.println("Seaters :" + seaters);
-        System.out.println("Wheel :" + wheel);
-        System.out.println("Helmet Free :" + (Helmet ? "Inclusive" : "Not Inclusive"));
+        System.out.println("Wheel :" + NoOfWheels);
     }
 }

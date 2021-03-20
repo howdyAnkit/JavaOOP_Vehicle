@@ -6,7 +6,7 @@ class Driver {
         Scanner sc = new Scanner(System.in);
         System.out.println("Please Enter your VehicleNumber");
         int wheel = sc.nextInt();
-
+        int UserInputOption;
         switch (wheel) {
         case 1:
             Vehicle v = new OneWheeler(1);
@@ -23,7 +23,7 @@ class Driver {
             System.out.println("Please select Option");
             System.out.println("1: Cycle -> ");
             System.out.println("2: Bike ->");
-            int UserInputOption = sc.nextInt();
+            UserInputOption = sc.nextInt();
             switch (UserInputOption) {
             case 1:
                 Cycle refCycle = new Cycle();
@@ -39,6 +39,34 @@ class Driver {
             }
             break;
         case 3:
+            Vehicle v3 = new ThreeWheeler();
+            ThreeWheeler w3 = (ThreeWheeler) v3;
+            System.out.println("Please Select Option");
+            System.out.println("1. Auto");
+            UserInputOption = sc.nextInt();
+            switch (UserInputOption) {
+            case 1:
+                Auto refAuto = new Auto();
+                refAuto.ThreeWheeler();
+                break;
+            }
+            break;
+        case 4:
+            Vehicle v4 = new FourWheeler();
+            FourWheeler w4 = (FourWheeler) v4;
+            System.out.println("Please Select Option");
+            System.out.println("1. Petrol");
+            UserInputOption = sc.nextInt();
+            switch (UserInputOption) {
+            case 1:
+                Petrol refPetrol = new Petrol();
+                refPetrol.Petrol4Wheelers();
+                break;
+            case 2:
+                Diesel refDiesel = new Diesel();
+                refDiesel.DieselFeatures();
+                break;
+            }
             // case 3:
             // this.wheel = 3;
             // break;
