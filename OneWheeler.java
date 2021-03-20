@@ -1,14 +1,14 @@
-public class OneWheeler extends Vehicle {
-    int NoOfWheels = wheel;
+class OneWheeler extends Vehicle {
+    int NoOfWheels;
     int NoOfOneWheeler;
     String OnewheelerNames;
 
-    OneWheeler(int wheel) {
-        this.NoOfWheels = wheel;
+    OneWheeler() {
+        System.out.println("Details oF Circus Cycle below");
     }
 
-    public void oneFeatures(int wheel) {
-        System.out.println("Wheels" + wheel);
+    OneWheeler(int wheel) {
+        this.NoOfWheels = wheel;
     }
 
     // OneWheeler(boolean Automatic2, boolean Manual2, boolean Steering2, int
@@ -19,11 +19,17 @@ public class OneWheeler extends Vehicle {
     // this.seaters = Seaters2;
     // }
 
-    public void OnewWheelerFeatures(int wheel, boolean Automatic) {
-        System.out.println("No.of Wheels" + NoOfWheels);
-        System.out.println(Automatic);
+    void OnewWheelerFeatures(int wheel, boolean Automatic) {
+        System.out.println("No.of Wheels " + NoOfWheels);
+        System.out.println("Automatic " + Automatic);
     }
 
+    public void Engine() {
+        boolean Petrol = false;
+        boolean Diesel = false;
+        boolean Electric = false;
+
+    }
 }
 
 class CircusCycle extends OneWheeler {
@@ -32,14 +38,24 @@ class CircusCycle extends OneWheeler {
     // Seaters) {
     // super(powerSteering, Manual, Steering, Seaters);
     // }
-    boolean Automatic = true;
-    boolean Manual;
-    boolean Steering;
-    int seaters = 3;
+    // boolean Automatic = false;
+    // boolean Manual;
+    // boolean Steering;
+    // int seaters = 3;
 
-    public void oneFeatures(int seaters, boolean Manual) {
-        System.out.println(Manual);
+    boolean Automatic = false;
+    boolean Manual = false;
+    int Seaters = 1;
+
+    void oneFeatures() {
+        System.out.println("Manual " + this.Manual);
+        System.out.println("Seaters " + this.Seaters);
+        System.out.println("Automatic " + Automatic);
     }
+
+    // public void Engine(String ){
+
+    // }
 
     // public void OneWheeler(int wheel, boolean Automatic, boolean Manual, boolean
     // Steering, int seaters) {
